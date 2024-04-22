@@ -9,14 +9,17 @@
       rel="stylesheet"
     />
     <style>
+      .hyperlink {
+        color: blue;
+      }
       body {
         margin: 0;
         font-family: "Roboto", sans-serif;
-        background-color: #f7f3f3;
+        background-color: #ffffff;
         color: #000000;
       }
       .navbar {
-        background-color: rgb(116, 116, 116);
+        background-color: rgb(0, 0, 0);
         color: white;
         text-align: center;
         padding: 10px 0;
@@ -53,11 +56,18 @@
     <div class="at">
         <span>
       <h1><u>Project Architecture</u></h1>
-      <p><i>(Please click on the image to view full screen)</i></p>
+
     </div>
     <div class="content">
-      <iframe src="./diagram.drawio.html" title="Embedded Web Page"></iframe>
+      <img src="./architecture.drawio.png" alt="Cloud architecture" height="700">
+      <figcaption><i><b>Fig.1 - Cloud Architecture</b></i></figcaption>
+      <br>
+      <hr>
+      <br>
+      <img src="./CD_workflow.drawio.png" alt="Cloud architecture" height="400">
+      <figcaption><i><b>Fig.2 - CD workflow</b></i></figcaption>
     </div>
+    <hr>
 
     <div class="description">
       <h2>Project description:</h2>
@@ -65,7 +75,7 @@
       <h3>Repositories on GitHub 📁</h3>
 <ul>
     <li>
-        <strong><a href="https://github.com/varun-jayakumar/serverless-fork">Webapp:</a></strong> Contains the web application (REST API) code. GitHub Actions are used for Continuous Deployment (CD):
+        <strong><a class="hyperlink" href="https://github.com/varun-jayakumar/serverless-fork">Webapp:</a></strong> Contains the web application (REST API) code. GitHub Actions are used for Continuous Deployment (CD):
         <ul>
             <li>When code is merged, an AMI of the webapp is built on a VM spun up on Google Cloud, using Packer.</li>
             <li>The built AMI is then used to create an instance template on Google Cloud.</li>
@@ -73,10 +83,10 @@
         </ul>
     </li>
     <li>
-        <strong><a href="https://github.com/varun-jayakumar/tf-gcp-infra-fork">Terraform-IAC:</a></strong> Contains Infrastructure as Code (IAC) for setting up and modifying infrastructure.
+        <strong><a class="hyperlink" href="https://github.com/varun-jayakumar/tf-gcp-infra-fork">Terraform-IAC:</a></strong> Contains Infrastructure as Code (IAC) for setting up and modifying infrastructure.
     </li>
     <li>
-        <strong><a href="https://github.com/varun-jayakumar/serverless-fork">Serverless:</a></strong> Contains JavaScript function code deployed on Google Cloud Function to send verification emails when a user signs up.
+        <strong><a class="hyperlink" href="https://github.com/varun-jayakumar/serverless-fork">Serverless:</a></strong> Contains JavaScript function code deployed on Google Cloud Function to send verification emails when a user signs up.
     </li>
 </ul>
 
